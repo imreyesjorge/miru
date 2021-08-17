@@ -28,7 +28,7 @@ nav {
 
     width: 70%;
     
-    padding: .5rem 1rem;
+    padding: .5rem;
 
     border: 1px solid #E8E8E8;
     border-radius: 8px;
@@ -54,5 +54,22 @@ nav {
         border: none;
 
         outline: none;
+
+        &:not(:placeholder-shown) ~ #searchButton {
+            opacity: 1;
+        }
     }
+}
+
+#searchButton {
+    color: rgba(black, .4);
+
+    padding: .2rem .4rem;
+
+    border: 1px solid rgba(black, .1);
+    border-radius: 5px;
+
+    opacity: 0;
+    transition: .2s;
+    cursor: pointer;
 }
