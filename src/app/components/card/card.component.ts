@@ -10,11 +10,13 @@ export class CardComponent implements OnInit {
   @Input() animeCover: string;
   @Input() animeName: string;
   @Input() animeScore: string;
+  @Input() animeLink: string;
 
   constructor() { 
     this.animeCover = "";
     this.animeName = "Unknown";
     this.animeScore = "0";
+    this.animeLink = "#";
   }
 
   ngOnInit(): void {
