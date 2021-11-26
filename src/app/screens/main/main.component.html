@@ -1,37 +1,13 @@
 <div class="container">
   <app-nav></app-nav>
   <main>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+    <div style="display: flex; justify-content: center; flex-wrap: wrap">
       <app-card
-      animeCover="https://cdn.myanimelist.net/images/anime/10/78745.jpg"
-      animeName="Boku No Hero"
-      animeScore="4.5"
-    ></app-card>
-    <app-card
-      animeCover="https://cdn.myanimelist.net/images/anime/10/78745.jpg"
-      animeName="Boku No Hero"
-      animeScore="4.5"
-    ></app-card>
-    <app-card
-      animeCover="https://cdn.myanimelist.net/images/anime/10/78745.jpg"
-      animeName="Boku No Hero"
-      animeScore="4.5"
-    ></app-card>
-    <app-card
-      animeCover="https://cdn.myanimelist.net/images/anime/10/78745.jpg"
-      animeName="Boku No Hero"
-      animeScore="4.5"
-    ></app-card>
-    <app-card
-      animeCover="https://cdn.myanimelist.net/images/anime/10/78745.jpg"
-      animeName="Boku No Hero"
-      animeScore="4.5"
-    ></app-card>
-    <app-card
-      animeCover="https://cdn.myanimelist.net/images/anime/10/78745.jpg"
-      animeName="Boku No Hero"
-      animeScore="4.5"
-    ></app-card>
+        *ngFor="let anime of topAnimes"
+        [animeName]="anime.name"
+        [animeCover]="anime.cover"
+        [animeScore]="anime.score"
+      ></app-card>
     </div>
   </main>
   <app-footer></app-footer>
