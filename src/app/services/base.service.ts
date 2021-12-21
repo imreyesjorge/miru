@@ -14,4 +14,11 @@ export class BaseService {
   public getTopAnimes() {
     return this.http.get(`${this.apiUrl}/top/anime/1/airing`);
   }
+
+  /**
+   * Get Searched anime results
+   */
+  public searchAnime(term: string) {
+    return this.http.get(`${this.apiUrl}/search/anime?q=${term}`);
+  }
 }

@@ -21,7 +21,6 @@ export class MainComponent implements OnInit {
   onLoad() {
     this.baseService.getTopAnimes().subscribe({
       next: (res: any) => {
-        console.log(res.top[0]);
         this.topAnimes = res.top;
       }
     });

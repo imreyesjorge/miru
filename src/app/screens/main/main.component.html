@@ -1,8 +1,7 @@
 <div class="container">
-  <app-nav></app-nav>
   <main>
     <h1 class="category"><span class="em">Trending</span> Animes 🔥</h1>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap">
+    <div class="animeContainer">
       <app-card
         *ngFor="let anime of topAnimes"
         [animeName]="anime.title"
