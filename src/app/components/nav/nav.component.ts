@@ -10,4 +10,15 @@ export class NavComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {}
+
+  onSearch(searchedTerm: string | null) {
+    console.log('onSearch executed!', searchedTerm);
+  }
+
+  // KeyboardEvent type not working properly?
+  handleTypeSearch(event: any) {
+    if (event.key == 'Enter' && event.target.value) {
+      this.onSearch(event.target.value);
+    }
+  }
 }
