@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -9,13 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 export class NavComponent implements OnInit {
   private searchInput: HTMLInputElement | null = null;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: Router) {}
 
   ngOnInit(): void {
     this.searchInput = document.querySelector('#searchInput');
   }
 
   onSearch(searchedTerm: string | null) {
+    this.route.navigate(['/search'], {
+      queryParams: { term: searchedTerm },
+    });
     console.log('onSearch executed!', searchedTerm);
   }
 
