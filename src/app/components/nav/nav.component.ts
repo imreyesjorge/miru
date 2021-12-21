@@ -7,9 +7,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
+  private searchInput: HTMLInputElement | null = null;
+
   constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.searchInput = document.querySelector('#searchInput');
+  }
 
   onSearch(searchedTerm: string | null) {
     console.log('onSearch executed!', searchedTerm);
@@ -19,6 +23,12 @@ export class NavComponent implements OnInit {
   handleTypeSearch(event: any) {
     if (event.key == 'Enter' && event.target.value) {
       this.onSearch(event.target.value);
+    }
+  }
+
+  handleClickSearch() {
+    if (this.searchInput) {
+      this.onSearch(this.searchInput.value);
     }
   }
 }

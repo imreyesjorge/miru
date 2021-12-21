@@ -2,7 +2,12 @@
   <a href="#" id="logo">Miru<span>.</span></a>
   <div class="searchBar">
     <img class="icon" [src]="'\assets/icons/Search.svg'" alt="search icon" />
-    <input type="text" placeholder="What are your looking for?" (keypress)="handleTypeSearch($event)" />
-    <button id="searchButton" (click)="onSearch('test')">search</button>
+    <input
+      type="text"
+      placeholder="What are your looking for?"
+      (keypress)="handleTypeSearch($event)"
+      id="searchInput"
+    />
+    <button id="searchButton" (click)="handleClickSearch()">search</button>
   </div>
 </nav>
