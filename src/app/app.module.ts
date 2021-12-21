@@ -8,6 +8,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './screens/main/main.component';
 import { CardComponent } from './components/card/card.component';
+import { SearchComponent } from './screens/search/search.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CardComponent } from './components/card/card.component';
     NavComponent,
     FooterComponent,
     MainComponent,
-    CardComponent
+    CardComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
