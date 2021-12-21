@@ -1,17 +1,23 @@
 .container {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 main {
-    padding: 1rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .category {
-    color: #343434;
+  color: #343434;
 
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .em {
-    color: slateblue;
+  color: slateblue;
+}
+
+.animeContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

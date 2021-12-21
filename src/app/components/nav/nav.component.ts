@@ -19,7 +19,6 @@ export class NavComponent implements OnInit {
     this.route.navigate(['/search'], {
       queryParams: { term: searchedTerm },
     });
-    console.log('onSearch executed!', searchedTerm);
   }
 
   // KeyboardEvent type not working properly?
