@@ -8,9 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
   public paramQuery: string;
+  public searchResults: any[];
 
   constructor(private route: ActivatedRoute) {
     this.paramQuery = '';
+    this.searchResults = [];
   }
 
   ngOnInit(): void {
