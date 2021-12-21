@@ -12,6 +12,6 @@ export class BaseService {
    * Get top animes
    */
   public getTopAnimes() {
-    return this.http.get(`${this.apiUrl}/top/anime`);
+    return this.http.get(`${this.apiUrl}/top/anime/1/airing`);
   }
 }
