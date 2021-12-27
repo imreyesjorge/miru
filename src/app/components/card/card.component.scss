@@ -10,6 +10,10 @@ article {
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    
+    @media only screen and (max-width: 600px) {
+        margin: .65rem;
+    }
 
     img {
         width: 100%;
